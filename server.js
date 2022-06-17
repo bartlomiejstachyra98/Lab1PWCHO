@@ -8,10 +8,9 @@ const date = new Date();
 
 
 app.get('/', function(req, res) {
-    // const remoteAddress = req.socket.remoteAddress;
-    // const array = remoteAddress.split(':')
-    const remoteIP = '46.19.37.108'
-    console.log(remoteIP);
+    const remoteAddress = req.socket.remoteAddress;
+    const array = remoteAddress.split(':')
+    const remoteIP = array[array.length -1]
     satelize.satelize({ip:remoteIP}, function(err, payload) {
         timezone = payload.timezone;
     });
