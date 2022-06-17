@@ -20,7 +20,9 @@ app.get('/', function(req, res) {
         timeStyle: 'full',
     }),);
 });
+ 
+const port = process.env,port || 3000;
 
-app.listen(3000, function() {
+app.listen(port, function() {
     console.log(date_ob + ' autor: Bartlomiej Stachyra port: ', this.address().port);
 });
